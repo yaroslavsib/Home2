@@ -13,8 +13,8 @@ class Color {
     public function __toString() {
         return $this->red.", ".$this->green.", ".$this->blue;
     }
-
 }
+
 
 abstract class Component {
     public $color;
@@ -32,11 +32,11 @@ class Rectangle extends Component {
         $this->width = $width;
         $this->height = $height;
     }
-
     public function render() {
         echo "<div style=\"background-color:RGB($this->color); width: ".$this->width."px; height: ".$this->height."px;\"></div>";
     }
 }
+
 
 class BorderRectangle extends Rectangle {
     public $borderColor;
@@ -45,11 +45,11 @@ class BorderRectangle extends Rectangle {
         parent::__construct($color, $width, $height);
         $this->borderColor = $borderColor;
     }
-
     public function render() {
         echo "<div style=\"background-color:RGB($this->color); width: ".$this->width."px; height: ".$this->height."px; border: solid 5px ".$this->borderColor.";\"></div>";
     }
 }
+
 
 class PositionedRectangle extends Rectangle {
     public $left_margin;
@@ -64,6 +64,7 @@ class PositionedRectangle extends Rectangle {
         echo "<div style=\"background-color:RGB($this->color); width: ".$this->width."px; height: ".$this->height."px; position: absolute; left: ".$this->left."px; top: ".$this->top."px;\"></div>";
     }
 }
+
 
 class Renderer {
     public $objects;
