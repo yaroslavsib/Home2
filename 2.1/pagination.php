@@ -70,6 +70,3 @@ function Paginator($pageCount, $currentPage, $offset) {
         }
     }
 }
-
-
-paginator(5, 1, 1);
