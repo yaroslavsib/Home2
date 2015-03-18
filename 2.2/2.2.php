@@ -17,7 +17,7 @@ class Color {
 }
 
 abstract class Component {
-	public $color;
+    public $color;
     public $width;
     public $height;
 
@@ -57,8 +57,8 @@ class PositionedRectangle extends Rectangle {
 
     public function __construct(Color $color, $width, $height, $left_margin, $top_margin) {
         parent::__construct($color, $width, $height);
-            $this->left = $left_margin;
-            $this->top = $top_margin;
+        $this->left = $left_margin;
+        $this->top = $top_margin;
     }
     public function render() {
         echo "<div style=\"background-color:RGB($this->color); width: ".$this->width."px; height: ".$this->height."px; position: absolute; left: ".$this->left."px; top: ".$this->top."px;\"></div>";
